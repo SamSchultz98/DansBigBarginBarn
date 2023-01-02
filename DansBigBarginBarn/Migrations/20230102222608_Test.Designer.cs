@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DansBigBarginBarn.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230102210105_Products")]
-    partial class Products
+    [Migration("20230102222608_Test")]
+    partial class Test
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace DansBigBarginBarn.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Descritption")
+                    b.Property<string>("Description")
                         .HasMaxLength(140)
                         .HasColumnType("nvarchar(140)");
 
@@ -46,7 +46,6 @@ namespace DansBigBarginBarn.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<int>("Quantity")
-                        .HasMaxLength(40)
                         .HasColumnType("int");
 
                     b.HasKey("Id");

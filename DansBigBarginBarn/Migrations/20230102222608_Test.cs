@@ -5,7 +5,7 @@
 namespace DansBigBarginBarn.Migrations
 {
     /// <inheritdoc />
-    public partial class Products : Migration
+    public partial class Test : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,9 +17,9 @@ namespace DansBigBarginBarn.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
-                    Descritption = table.Column<string>(type: "nvarchar(140)", maxLength: 140, nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(140)", maxLength: 140, nullable: true),
                     Photopath = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
-                    Quantity = table.Column<int>(type: "int", maxLength: 40, nullable: false)
+                    Quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

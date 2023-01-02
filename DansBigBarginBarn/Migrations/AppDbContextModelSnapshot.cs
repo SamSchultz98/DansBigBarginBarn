@@ -29,7 +29,7 @@ namespace DansBigBarginBarn.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Descritption")
+                    b.Property<string>("Description")
                         .HasMaxLength(140)
                         .HasColumnType("nvarchar(140)");
 
@@ -43,7 +43,6 @@ namespace DansBigBarginBarn.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<int>("Quantity")
-                        .HasMaxLength(40)
                         .HasColumnType("int");
 
                     b.HasKey("Id");
